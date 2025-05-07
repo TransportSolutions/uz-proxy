@@ -14,7 +14,12 @@ app.get('/uz', async (req, res) => {
 
   try {
     const response = await axios.get(url, {
-      headers: { 'User-Agent': 'Mozilla/5.0' }
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9',
+        'Accept-Language': 'uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7',
+        'Connection': 'keep-alive'
+      }
     });
     res.send(response.data);
   } catch (err) {
